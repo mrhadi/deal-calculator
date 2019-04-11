@@ -6,7 +6,8 @@ const { Checkout } = require('./checkout');
 const pricing_rules = makePricingRule(products);
 const checkout = new Checkout(pricing_rules);
 
-console.log(`\nWelcome to ShoppingRUs\n`);
+console.log(`Welcome to Deal Calculator`);
+console.log(`--------------------------\n`);
 
 checkout.scan('mbp');
 checkout.scan('vga');
