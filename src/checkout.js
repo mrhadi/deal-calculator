@@ -1,4 +1,4 @@
-const { BULK_TYPE, BXGY_TYPE, BUNDLE_TYPE } = require('./constants');
+const { BULK_TYPE, BXGY_TYPE, BUNDLE_TYPE } = require('./utils/constants');
 
 class Checkout {
   constructor(pricingRules){

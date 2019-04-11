@@ -1,6 +1,6 @@
-const { products } = require('./products');
-const { makePricingRule } = require('./tools');
-const { Checkout } = require('./checkout');
+const { products } = require('./src/products');
+const { makePricingRule } = require('./src/utils/deal_maker');
+const { Checkout } = require('./src/checkout');
 
 
 const pricing_rules = makePricingRule(products);
