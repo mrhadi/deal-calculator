@@ -25,12 +25,12 @@ class Checkout {
       }
     }
     else {
-      console.log(`Can't find '${product}' in database!`);
+      console.log(`Can't find '${product}' in products!`);
     }
   }
 
   total() {
-    console.log(`Items in shopping list:`);
+    console.log(`Items in checkout list:`);
 
     for (let item in this.shoppingList) {
       let product = this.pricingRules[item];

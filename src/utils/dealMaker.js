@@ -1,40 +1,40 @@
-const { bulk_deal, bxgy_deal, bundle_deal } = require('./dealObjects');
+const { bulkDeal, bxgyDeal, bundleDeal } = require('./dealObjects');
 
-const make_bulk_deal = (minCount, bulkPrice, deal = bulk_deal) => {
-  let bulk_deal = Object.create(deal);
-  bulk_deal.min_count = minCount;
-  bulk_deal.bulk_price = bulkPrice;
+const makeBulkDeal = (minCount, bulkPrice, deal = bulkDeal) => {
+  let bulkDeal = Object.create(deal);
+  bulkDeal.min_count = minCount;
+  bulkDeal.bulk_price = bulkPrice;
 
-  return bulk_deal
+  return bulkDeal
 };
 
-const make_bundle_deal = (buy, get, deal = bundle_deal) => {
-  let bundle_deal = Object.create(deal);
-  bundle_deal.buy = buy;
-  bundle_deal.get = get;
+const makeBundleDeal = (buy, get, deal = bundleDeal) => {
+  let bundleDeal = Object.create(deal);
+  bundleDeal.buy = buy;
+  bundleDeal.get = get;
 
-  return bundle_deal;
+  return bundleDeal;
 };
 
-const make_bxgy_deal = (buyX, getY, deal = bxgy_deal) => {
-  let bxgy_deal = Object.create(deal);
-  bxgy_deal.buyx = buyX;
-  bxgy_deal.gety = getY;
+const makeBxGyDeal = (buyX, getY, deal = bxgyDeal) => {
+  let bxgyDeal = Object.create(deal);
+  bxgyDeal.buyx = buyX;
+  bxgyDeal.gety = getY;
 
-  return bxgy_deal;
+  return bxgyDeal;
 };
 
 const makePricingRule = (products) => {
-  const ipd_deal = make_bulk_deal(4, 499.99);
-  const atv_deal = make_bxgy_deal(2,3);
-  const vga_deal = make_bundle_deal(products.mbp, products.vga);
-  const pricing_rule = Object.create(products);
+  const ipdDeal = makeBulkDeal(4, 499.99);
+  const atvDeal = makeBxGyDeal(2,3);
+  const vgaDeal = makeBundleDeal(products.mbp, products.vga);
+  const pricingRule = Object.create(products);
 
-  pricing_rule.ipd.deal = ipd_deal;
-  pricing_rule.atv.deal = atv_deal;
-  pricing_rule.vga.deal = vga_deal;
+  pricingRule.ipd.deal = ipdDeal;
+  pricingRule.atv.deal = atvDeal;
+  pricingRule.vga.deal = vgaDeal;
 
-  return pricing_rule;
+  return pricingRule;
 };
 
 module.exports = {

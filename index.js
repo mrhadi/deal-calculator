@@ -3,8 +3,8 @@ const { makePricingRule } = require('./src/utils/dealMaker');
 const { Checkout } = require('./src/checkout');
 
 
-const pricing_rules = makePricingRule(products);
-const checkout = new Checkout(pricing_rules);
+const pricingRules = makePricingRule(products);
+const checkout = new Checkout(pricingRules);
 
 console.log(`Welcome to Deal Calculator`);
 console.log(`--------------------------\n`);
