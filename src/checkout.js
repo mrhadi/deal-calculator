@@ -60,9 +60,9 @@ class Checkout {
         else if (deal.type === BUNDLE_TYPE) {
           if (product === deal.get) {
             let get = deal.buy;
-            let key = keyFinder(this.pricingRules, get);
+            let sku = keyFinder(this.pricingRules, get);
 
-            if (this.shoppingList[key]) {
+            if (this.shoppingList[sku]) {
               this.totalPrice += 0;
               continue;
             }
