@@ -1,0 +1,16 @@
+{
+  "name": "deal-calculator",
+  "version": "1.0.0",
+  "description": "Simulates deals on a checkout system",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrhadi/deal-calculator.git"
+  },
+  "author": "Hadi Shad",
+  "license": "ISC"
+}
