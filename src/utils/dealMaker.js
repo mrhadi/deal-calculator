@@ -1,4 +1,4 @@
-const { bulk_deal, bxgy_deal, bundle_deal } = require('./deal_objects');
+const { bulk_deal, bxgy_deal, bundle_deal } = require('./dealObjects');
 
 const make_bulk_deal = (minCount, bulkPrice, deal = bulk_deal) => {
   let bulk_deal = Object.create(deal);

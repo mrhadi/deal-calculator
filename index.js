@@ -1,5 +1,5 @@
 const { products } = require('./src/products');
-const { makePricingRule } = require('./src/utils/deal_maker');
+const { makePricingRule } = require('./src/utils/dealMaker');
 const { Checkout } = require('./src/checkout');
 
 
