@@ -1,7 +1,7 @@
-const keyFinder = (obj, value) => {
+const skuFinder = (obj, value) => {
   return Object.keys(obj).find(key => obj[key] === value);
 };
 
 module.exports = {
-  keyFinder
+  skuFinder: skuFinder
 };

@@ -1,5 +1,5 @@
 const { BULK_TYPE, BXGY_TYPE, BUNDLE_TYPE } = require('./utils/constants');
-const { keyFinder } = require('./utils/keyFinder');
+const { skuFinder } = require('./utils/skuFinder');
 
 class Checkout {
   constructor(pricingRules){
@@ -60,7 +60,7 @@ class Checkout {
         else if (deal.type === BUNDLE_TYPE) {
           if (product === deal.get) {
             let get = deal.buy;
-            let sku = keyFinder(this.pricingRules, get);
+            let sku = skuFinder(this.pricingRules, get);
 
             if (this.shoppingList[sku]) {
               this.totalPrice += 0;
