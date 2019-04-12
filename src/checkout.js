@@ -2,7 +2,7 @@ const { BULK_TYPE, BXGY_TYPE, BUNDLE_TYPE } = require('./utils/constants');
 const { skuFinder } = require('./utils/skuFinder');
 
 class Checkout {
-  constructor(pricingRules){
+  constructor(pricingRules) {
     this.pricingRules = pricingRules;
     this.shoppingList = [];
     this.totalPrice = 0;
@@ -30,14 +30,14 @@ class Checkout {
   }
 
   total() {
-    console.log(`Items in checkout list:`);
+    console.log(`Items in this checkout:`);
 
     for (let item in this.shoppingList) {
       let product = this.pricingRules[item];
       let count = this.shoppingList[item];
       let deal = product.deal;
 
-      console.log(`${product.name} X ${count}`);
+      console.log(`${product.name} X ${count} X $${product.price}`);
 
       if (deal) {
         if (deal.type === BULK_TYPE) {
